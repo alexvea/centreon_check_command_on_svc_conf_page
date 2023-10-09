@@ -21,6 +21,8 @@ How to install :
 
 Known issues : 
 "Get check command" : not working to get check command for some services templates (ie : App-Monitoring-Centreon-Process-centengine)(template of a template of a tempalte ?)
+
+
 "Execute check command" : issue with options quotes examples : 
 ````
 --critical-status='%{type} eq "output"'
