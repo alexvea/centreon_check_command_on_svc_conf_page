@@ -1,0 +1,1 @@
+# centreon_check_command_on_svc_conf_page
