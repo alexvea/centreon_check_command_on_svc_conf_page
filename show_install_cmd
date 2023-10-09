@@ -1,0 +1,2 @@
+cp -f centreon_check_command.class.php /usr/share/centreon/www/api/class/centreon_check_command.class.php
+cp -f formService.ihtml /usr/share/centreon/www/include/configuration/configObject/service/formService.ihtml
