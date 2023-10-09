@@ -20,6 +20,8 @@ How to install :
     
 
 Known issues : 
+
+
 "Get check command" : not working to get check command for some services templates (ie : App-Monitoring-Centreon-Process-centengine)(template of a template of a tempalte ?)
 
 
