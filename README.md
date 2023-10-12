@@ -36,17 +36,3 @@ Known issues :
 
 
 "Get check command" : not working to get check command for some services templates (ie : App-Monitoring-Centreon-Process-centengine)(template of a template of a template ?)
-
-
-"Execute check command" : issue with options quotes examples : 
-````
---critical-status='%{type} eq "output"'
-````
-````
-/usr/lib/centreon/plugins//centreon_centreon_central.pl --plugin=apps::centreon::local::plugin --hostname='' --mode=broker-stats --broker-stats-file='/var/lib/centreon-broker/central-broker-master-stats.json' --broker-stats-file='/var/lib/centreon-broker/central-rrd-master-stats.json' --broker-stats-file='/var/lib/centreon-engine/central-module-master-stats.json' --filter-name='' --critical-status='%{type} eq "output" and %{queue_file_enabled} =~ \/true|yes\/i'
-````
-error :
-````
-UNKNOWN: Unsafe code evaluation: Bareword \\\"output\\\" not allowed while \\\"strict subs\\\" in use at (eval 19) line 1.
-````
-
