@@ -214,11 +214,9 @@ class CentreonCheckCommand extends CentreonConfigurationObjects
   	"Content-Type: application/json",
 	);
 	curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-
+	$command = json_encode($command);
 	$data = <<<DATA
-		[{
-		"command": "$command"
-		}]
+		[{"command": $command}]
 	DATA;
 	curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
 	$json_curl_data = curl_exec($curl);
