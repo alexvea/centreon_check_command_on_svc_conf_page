@@ -815,10 +815,11 @@ function loopGetLog(url,data) {
 $( "#execute_check_command_bt" ).on( "click", function() {
 	var url_execute = "/centreon/include/common/webServices/rest/internal.php?object=centreon_check_command&action=executeCommand"
 	var url_get_log = "/centreon/include/common/webServices/rest/internal.php?object=centreon_check_command&action=getlogCommand&token_id="
-	var command_input = $('textarea[id^=command_line]').val();
+	var sudo_user = "centreon-engine";
+    var command_input = $('textarea[id^=command_line]').val();
 	var host_name = $('#service_hPars').text();
-	var poller_infos = "echo 'poller :' $(hostname)' - user linux :' $(whoami);echo command result: ;"
-	var data = "[{\"command\": \""+poller_infos+command_input.replace(/"/g, "'")+"\" }, {\"host_name\": \""+host_name+"\"}]";
+	        var poller_infos = "echo 'poller :' $(hostname)' - user linux :' centreon-engine;echo command result: ;"
+	        var data = "[{\"command\": \"sudo -u "+sudo_user+" "+poller_infos+"sudo -u "+sudo_user+" "+command_input.replace(/"/g, "'")+"\" }, {\"host_name\": \""+host_name+"\"}]";
 	console.log(data);
 	$.post(url_execute, data, function(data, status){
 		var obj = jQuery.parseJSON(data);
