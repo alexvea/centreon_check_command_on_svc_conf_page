@@ -1,5 +1,5 @@
-cp -f centreon_check_command.class.php /usr/share/centreon/www/api/class/centreon_check_command.class.php
-cp -f formService.ihtml /usr/share/centreon/www/include/configuration/configObject/service/formService.ihtml
+cp -n centreon_check_command.class.php /usr/share/centreon/www/api/class/centreon_check_command.class.php
+cp -n formService.ihtml /usr/share/centreon/www/include/configuration/configObject/service/formService.ihtml
 -- On your all pollers your pollers execute the following : --
 echo "GORGONE ALL = (centreon-engine) NOPASSWD: /usr/lib64/nagios/plugins/check_*" >> /etc/sudoers.d/centreon-gorgone
 echo "GORGONE ALL = (centreon-engine) NOPASSWD: /usr/lib/centreon/plugins/centreon_*" >> /etc/sudoers.d/centreon-gorgone
